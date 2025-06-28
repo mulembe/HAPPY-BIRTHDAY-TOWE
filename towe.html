@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, Sis 🎉</title>
+  <link rel="stylesheet" href="towe.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, black, white, gold);
+      background-size: 400% 400%;
+      animation: gradient 12s ease infinite;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      padding: 1rem;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #start-screen, #main-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    #start-screen {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      transition: all 0.5s ease-out;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    #start-screen::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, transparent 20%);
+      background-size: 3em 3em;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    #main-content {
+      display: none;
+      animation: fadeIn 2s ease-in;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+    }
+
+    button {
+      padding: 0.9em 2em;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      background-color: gold;
+      color: black;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    }
+
+    .heart {
+      font-size: 2rem;
+      animation: pulse 1.5s infinite, float 3s ease-in-out infinite;
+      margin: 1em 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .note {
+      margin: 1.5rem auto;
+      max-width: 750px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      backdrop-filter: blur(4px);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .note {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 0.8em 1.5em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: 13px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .note {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Start screen -->
+  <div id="start-screen">
+    <h1>🎉 Happy Birthday, Sister 🎉</h1>
+    <p style="margin: 20px;">Tap to begin your surprise ✨</p>
+    <button onclick="startSite()">Happy Birthday</button>
+  </div>
+
+  <!-- Main content -->
+  <div id="main-content">
+    <h1>To the kindest soul I know 🖤💫</h1>
+    <p class="heart">🌟 🖤 💛 🤍 🌟</p>
+
+    <div class="note">
+      <p>From childhood memories to all our inside jokes, you’ve been my partner in crime, my confidant, and one of my biggest blessings.</p>
+      <p>Life is so much brighter with you in it!</p>
+      <p>May this year bring you endless joy, success in everything you do, and all the love you deserve.</p>
+      <p>You’re not just my sister—you’re my forever friend. Celebrate yourself today because you’re truly one of a kind!</p>
+      <p>Love you to the moon and back! ❤️🎂</p>
+    </div>
+
+    <div class="photo-gallery">
+  <img src="IMG-20250628-WA0006.jpg" alt="Memory 1">
+  <img src="IMG-20250628-WA0005.jpg" alt="Memory 2">
+  <img src="IMG-20250628-WA0004.jpg" alt="Memory 3">
+  <img src="IMG-20250628-WA0003.jpg" alt="Memory 4">
+  <img src="IMG-20250628-WA0002.jpg" alt="Memory 5">
+</div>
+
+
+    <footer>
+      Made with love just for you 🌙 — by someone who’s lucky to call you their sister 💛
+    </footer>
+  </div>
+
+  <script>
+    function startSite() {
+      document.getElementById('start-screen').style.opacity = '0';
+      setTimeout(() => {
+        document.getElementById('start-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+      }, 500);
+    }
+  </script>
+</body>
+</html>
