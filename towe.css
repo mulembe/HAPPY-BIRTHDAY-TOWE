@@ -29,3 +29,12 @@
     width: 90%;
   }
 }
+
+@font-face {
+  font-family: 'YourFont';
+  src: url('YourFont.woff2') format('woff2'), url('YourFont.woff') format('woff');
+}
+body {
+  font-family: 'YourFont', Arial, sans-serif;
+}
+
